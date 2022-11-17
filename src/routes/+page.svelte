@@ -11,15 +11,21 @@
 </script>
 
 <div class="grid">
+  <!-- https://svelte.dev/tutorial/key-blocks -->
   {#key story_id}
-  <!-- https://svelte.dev/tutorial/in-and-out -->
-    <div class="container" in:fly="{{ x: 800, duration: 750 }}" out:fly="{{ x: -800, duration: 750 }}" >
+    <!-- https://svelte.dev/tutorial/in-and-out -->
+    <div
+      class="container"
+      in:fly={{ x: 800, duration: 750 }}
+      out:fly={{ x: -800, duration: 750 }}
+    >
+      <!-- https://svelte.dev/tutorial/if-blocks -->
       {#if story}
         {#if story.img}
           <img src={story.img} alt={story.message} />
         {/if}
         {#if story.html}
-        <!-- https://svelte.dev/tutorial/html-tags -->
+          <!-- https://svelte.dev/tutorial/html-tags -->
           {@html story.html}
         {/if}
         <p>{story.message}</p>
@@ -33,6 +39,7 @@
             >
           {/each}
         </div>
+        <!-- https://svelte.dev/tutorial/else-blocks -->
       {:else}
         <p>STORY FOR ID {story_id} MISSING</p>
       {/if}
@@ -49,6 +56,12 @@
     justify-content: center;
   }
 
+  /* force the container to stay in the same position of the grid */
+  /* we need this to ensure that the container div does not move weirdly
+     when two divs coexist which they do while the out and in transition
+     is playing simultaneously. Try removing the grid-column placement stuff
+     and you might notice some weird behaviour.
+  */
   .container {
     grid-column-start: 1;
     grid-column-end: 2;
