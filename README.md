@@ -20,3 +20,5 @@ Ni behöver aktivera GitHub Pages för ert repo när ni är klara:
 ![Instruktioner för GitHub Pages](github_pages.png "GitHub Pages Instruction")
 
 Ni kan [läsa mer här](https://pages.github.com/).
+
+Sedan kommer ni nå er hemsida på Ni kan [https://username.github.io](https://williamviktorsson.github.io/).
