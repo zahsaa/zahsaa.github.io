@@ -5,19 +5,12 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview",
-		"add-build-to-commit": "git add docs;git commit --reuse-message=HEAD;"
+		"preview": "vite preview"
 	},
-	"pre-push": [
-		"build",
-		"add-build-to-commit"
-	  ],
-
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-static": "^1.0.0-next.48",
+		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
-		"pre-push": "^0.1.4",
 		"svelte": "^3.44.0",
 		"vite": "^3.1.0"
 	},
