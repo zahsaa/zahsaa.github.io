@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-4cd83b99.js",
+    "file": "_app/immutable/start-00c1ac26.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-46982e98.js",
-      "_singletons-d6285cec.js"
+      "_singletons-69d6afe3.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -23,12 +23,12 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-3c636a8b.js",
+    "file": "_app/immutable/components/error.svelte-6294511d.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-46982e98.js",
-      "_singletons-d6285cec.js"
+      "_singletons-69d6afe3.js"
     ]
   },
   "src/routes/+page.svelte": {
@@ -59,8 +59,8 @@
       "__layout-5d13426d.js"
     ]
   },
-  "_singletons-d6285cec.js": {
-    "file": "_app/immutable/chunks/singletons-d6285cec.js",
+  "_singletons-69d6afe3.js": {
+    "file": "_app/immutable/chunks/singletons-69d6afe3.js",
     "imports": [
       "_index-a7c2d046.js"
     ]
@@ -87,7 +87,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-9d95fb02.js",
+    "file": "_app/immutable/chunks/1-dbcf0d55.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
