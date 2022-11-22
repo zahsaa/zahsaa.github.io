@@ -6,7 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"add-build-to-commit": "git add docs;git commit --reuse-message=HEAD; git push --no-verify"
+		"add-build-to-commit": "git add docs;git commit --reuse-message=HEAD;"
 	},
 	"pre-push": [
 		"build",
