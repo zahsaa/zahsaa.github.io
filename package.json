@@ -7,10 +7,15 @@
 		"build": "vite build",
 		"preview": "vite preview"
 	},
+	"pre-push": [
+		"npm run build",
+	  ],
+
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.48",
 		"@sveltejs/kit": "next",
+		"pre-push": "^0.1.4",
 		"svelte": "^3.44.0",
 		"vite": "^3.1.0"
 	},
