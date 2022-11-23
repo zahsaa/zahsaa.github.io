@@ -13,6 +13,18 @@ Detta bygger er hemsida och lägger den i mappen docs/
 
 Ni kan klona detta repo förslagsvis eller zippa och kopiera över det själva.
 
+Eller så kan ni själva fixa med:
+
+```
+import adapter from '@sveltejs/adapter-static'; //svelte.config.js
+"@sveltejs/adapter-static": "next", //package.json
+adapter: adapter({assets:'docs',pages:'docs'}) //svelte.config.js
+export const prerender = true; //+layout.js
+export const ssr = false; //+layout.js
+
+
+```
+
 ## GitHub Pages
 
 Ni behöver aktivera GitHub Pages för ert repo när ni är klara:
