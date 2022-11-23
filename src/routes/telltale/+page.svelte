@@ -8,7 +8,19 @@
   /* https://svelte.dev/tutorial/reactive-statements */
   $: story_id = $story_id_store;
   $: story = stories.find((story) => story.id == story_id);
+
+  let a = 0;
+
+  function test(){
+    a=a+1;
+  }
+
 </script>
+
+<h1 class="edith">Tjena edith {a}</h1>
+
+<button on:click={test}>Klicka mig</button>
+
 
 <main>
   <div class="grid">
@@ -88,6 +100,11 @@
   main {
     max-width: 100%;
     overflow-x: hidden;
+  }
+
+  .edith{
+    color: aquamarine;
+    
   }
 
 
