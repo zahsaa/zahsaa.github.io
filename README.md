@@ -25,6 +25,8 @@ export const ssr = false; //+layout.js
 
 ```
 
+Ni behöver också en fil i mappen static/ som heter .nojekyll
+
 ## GitHub Pages
 
 Ni behöver aktivera GitHub Pages för ert repo när ni är klara:
