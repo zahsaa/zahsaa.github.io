@@ -4,7 +4,7 @@
     cards.push({
       id: 5, // TODO: unique ids per card card
       img: "/notrick.gif", // TODO: unique images per card card
-      flipped: false,
+      flipped: true,
       completed: false,
     });
   }
@@ -15,7 +15,7 @@
       // TODO: Probably do what?
 
       // flip the cards over after 2s from seeing both cards
-      if (flipcount == 2) {
+      if (flipcount == 4) {
         setTimeout(() => {
           // flip over cards that have not been marked as "completed"
           cards.forEach((card) => {
