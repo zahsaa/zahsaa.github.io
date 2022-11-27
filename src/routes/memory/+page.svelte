@@ -4,7 +4,7 @@
     cards.push({
       id: 5, // TODO: unique ids per card card
       img: "/notrick.gif", // TODO: unique images per card card
-      flipped: true,
+      flipped: true,  // TODO: think
       completed: false,
     });
   }
