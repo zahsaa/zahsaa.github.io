@@ -11,7 +11,8 @@
   let flipcount = 0;
   function flip(card) {
     // flip card over if two cards are not already flipped
-    if (flipcount < 2) {
+    // TODO: and card is already not flipped
+    if (card.flipped && flipcount < 2) {
       // TODO: Probably do what?
 
       // flip the cards over after 2s from seeing both cards
