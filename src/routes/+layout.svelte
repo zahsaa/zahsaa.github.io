@@ -3,6 +3,8 @@
   <a href="/telltale">Telltale</a>
   <a href="/memory">Memory</a>
   <a href="/chat">Chat</a>
+  <a href="/search">Search</a>
+
 
   <a
     target="_blank"
