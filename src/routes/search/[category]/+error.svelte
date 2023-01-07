@@ -3,8 +3,6 @@
   
 </script>
 
-
-
 <main>
   <h2>{"You searched for: " + $page.params.category}</h2>
   <hr />

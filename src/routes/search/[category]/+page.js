@@ -1,4 +1,8 @@
-import { error, fail, invalid } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
+
+/* don't generate these pages at build time as we want to get the latest data from the API when a user navigates here */
+export const ssr = false;
+
 /** @type {import('./$types').PageLoad} */
 export async function load({ params, fetch }) {
 
@@ -12,7 +16,7 @@ export async function load({ params, fetch }) {
 
     /* Perform a networked HTTP GET request to an external API  */
     /* Documentation: https://random-data-api.com/documentation */
-    const response = await fetch('https://random-data-api.com/api/v2/' + "OOGABOOGA" + '?size=100&response_type=json', {
+    const response = await fetch('https://random-data-api.com/api/v2/' + "OOOGABOOGA" + '?size=100&response_type=json', {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers: {
             'Content-Type': 'application/json'

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_page-2870e030.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-bf3a348c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-31589446.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-bc435a7a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-8afd756c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/control-f5b05b5f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/parse-f0c618df.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-ff87aa20.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/memory/_page.svelte-b8045ee7.js">
+	</head>
+	<body>
+		<div style="display: contents">
+
+
+<nav><a href="/">Hem</a>
+  <a href="/telltale">Telltale</a>
+  <a href="/memory">Memory</a>
+  <a href="/chat">Chat</a>
+  <a href="/search">Search</a>
+  <a href="/blog">Blog</a>
+
+
+
+  <a target="_blank" href="https://github.com/williamviktorsson/williamviktorsson.github.io">GitHub</a></nav>
+
+<hr>
+
+<main class="svelte-g73vgp"><div class="row svelte-g73vgp"><div class="card svelte-g73vgp flipped"><img class="front svelte-g73vgp" src="/notrick.gif" alt="">
+        <img class="back svelte-g73vgp" src="front.webp" alt="">
+      </div><div class="card svelte-g73vgp flipped"><img class="front svelte-g73vgp" src="/notrick.gif" alt="">
+        <img class="back svelte-g73vgp" src="front.webp" alt="">
+      </div><div class="card svelte-g73vgp flipped"><img class="front svelte-g73vgp" src="/notrick.gif" alt="">
+        <img class="back svelte-g73vgp" src="front.webp" alt="">
+      </div><div class="card svelte-g73vgp flipped"><img class="front svelte-g73vgp" src="/notrick.gif" alt="">
+        <img class="back svelte-g73vgp" src="front.webp" alt="">
+      </div></div>
+</main>
+
+
+		<script type="module" data-sveltekit-hydrate="15xit3x">
+			import { start } from "./_app/immutable/start-bf3a348c.js";
+
+			start({
+				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="15xit3x"]').parentNode,
+				version: "1673125352534",
+				hydrate: {
+					node_ids: [0, 9],
+					data: [null,null],
+					form: null
+				}
+			});
+		</script>
+	</div>
+	</body>
+</html>
