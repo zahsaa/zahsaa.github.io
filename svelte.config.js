@@ -10,6 +10,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: [preprocess(), mdsvex({
@@ -23,6 +24,18 @@ const config = {
 			assets: 'docs',
 		})
 	},
+
+	vitePlugin: {
+		experimental: {
+			inspector: {
+				toggleKeyCombo: 'meta-shift',
+				holdMode: true,
+				showToggleButton: 'always',
+				toggleButtonPos: 'bottom-right'
+			}
+		}
+	},
+
 	extensions: ['.svelte', '.md', '.svx'],
 	remarkPlugins: [
 		[

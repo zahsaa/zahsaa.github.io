@@ -95,10 +95,6 @@
     overflow-x: hidden;
   }
 
-  .edith{
-    color: aquamarine;
-
-  }
 
 
 </style>
