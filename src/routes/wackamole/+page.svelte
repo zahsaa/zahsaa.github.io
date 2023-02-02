@@ -25,7 +25,7 @@
             items[index].active = false;
             items = items;
             lives--;
-            toast.error("missed", { id: "fail" });
+            toast.error("missed");
           }
         }, 1000);
       } else {
@@ -87,11 +87,11 @@
               if (item.active) {
                 item.active = false;
                 count++;
-                toast.success(count.toString(), { id: "success" });
+                toast.success(count.toString(), { position: "top-right" });
               } else {
                 count = 0;
                 lives--;
-                toast.error("RESET!", { id: "fail" });
+                toast.error("RESET!");
               }
             }}
             class="button"
@@ -100,8 +100,7 @@
       {/each}
     </div>
   </main>
-  <Toaster toastOptions={{ id: "success", position: "bottom-right" }} />
-  <Toaster toastOptions={{ id: "fail", position: "bottom-left" }} />
+  <Toaster toastOptions={{ position: "top-left" }} />
 {/if}
 
 <style>
