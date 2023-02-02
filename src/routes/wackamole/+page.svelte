@@ -1,32 +1,55 @@
 <script>
   import { onMount } from "svelte";
   import toast, { Toaster } from "svelte-french-toast";
+  import { flip } from "svelte/animate";
 
   let items = [];
   let count = 0;
   let lives = 10;
 
   for (let index = 0; index < 60; index++) {
-    items.push({ active: false });
+    items.push({ active: false, index });
   }
 
-  console.log(items);
-
-  onMount(() => {
+  onMount(async () => {
     let controller = setInterval(() => {
       if (lives > 0) {
         let index = Math.floor(Math.random() * 60);
-        items[index].active = true;
+        let item = items[index];
+        item.active = true;
+        index = items[index].index;
+        items = items;
         setTimeout(() => {
+          let index = items.findIndex((e) => e.index == item.index);
           if (items[index].active == true && lives > 0) {
             items[index].active = false;
+            items = items;
             lives--;
+            toast.error("missed", { id: "fail" });
           }
         }, 1000);
       } else {
         clearInterval(controller);
+        clearInterval(controller2);
       }
     }, 1000);
+
+    await new Promise((r) => {
+      setTimeout(r, 1000);
+    });
+
+    let controller2 = setInterval(() => {
+      if (lives > 0) {
+        let index = Math.floor(Math.random() * 60);
+        let index2 = Math.floor(Math.random() * 60);
+        let temp = items[index];
+        items[index] = items[index2];
+        items[index2] = temp;
+        items = items;
+      } else {
+        clearInterval(controller2);
+      }
+    }, 1337);
   });
 </script>
 
@@ -40,10 +63,6 @@
   </style>
 </svelte:head>
 
-<article>
-  <h1>Lives: {lives}</h1>
-</article>
-<hr />
 {#if lives <= 0}
   <main class="container">
     <header>
@@ -57,27 +76,32 @@
   </main>
 {:else}
   <main class="container">
+    <progress value={lives} max="10" />
+    <hr />
     <div class="mygrid">
-      {#each items as item}
-        <div
-          class:active={item.active == true}
-          on:click={() => {
-            if (item.active) {
-              item.active = false;
-              count++;
-              toast.success(count.toString());
-            } else {
-              count = 0;
-              lives--;
-              toast.error("RESET!");
-            }
-          }}
-          class="button"
-        />
+      {#each items as item (item.index)}
+        <label animate:flip>
+          <button
+            class:active={item.active == true}
+            on:click={() => {
+              if (item.active) {
+                item.active = false;
+                count++;
+                toast.success(count.toString(), { id: "success" });
+              } else {
+                count = 0;
+                lives--;
+                toast.error("RESET!", { id: "fail" });
+              }
+            }}
+            class="button"
+          />
+        </label>
       {/each}
     </div>
   </main>
-  <Toaster />
+  <Toaster toastOptions={{ id: "success", position: "bottom-right" }} />
+  <Toaster toastOptions={{ id: "fail", position: "bottom-left" }} />
 {/if}
 
 <style>
@@ -85,7 +109,6 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 10px;
-    height: 100%;
     width: 100%;
   }
 
@@ -94,6 +117,7 @@
     height: 80px;
     background-color: red;
     padding: 10px;
+    transition: background-color 0.2;
   }
 
   main {
@@ -102,10 +126,5 @@
 
   .active {
     background-color: green;
-  }
-
-  article {
-    position: fixed;
-    width: 50px;
   }
 </style>
