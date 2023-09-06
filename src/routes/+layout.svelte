@@ -9,7 +9,7 @@
   <a href="/telltale">Telltale</a>
 
   <a
-    target="_blank"
+    target="_blank" rel="noreferrer"
     href="https://github.com/lisaviktorsson/lisaviktorsson.github.io"
     >GitHub</a
   >
