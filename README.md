@@ -1,6 +1,6 @@
 # USERNAME.github.io
 
-Hej! Här är en mall för att hosta en egen hemsida på GitHub i ett projekt som ni kallar USERNAME.github.io där USERNAME är ert användarnamn, typ som att mitt användarnamn är **williamviktorsson**.
+Hej! Här är en mall för att hosta en egen hemsida på GitHub i ett projekt som ni kallar USERNAME.github.io där USERNAME är ert användarnamn, typ som att mitt användarnamn är **lisaviktorsson**.
 
 Jag har förberett hela detta projekt med det som behövs för att bygga en statisk hemsida med kommandot:
 
@@ -35,4 +35,4 @@ Ni behöver aktivera GitHub Pages för ert repo när ni är klara:
 
 Ni kan [läsa mer här](https://pages.github.com/).
 
-Sedan kommer ni nå er hemsida på Ni kan [https://username.github.io](https://williamviktorsson.github.io/).
+Sedan kommer ni nå er hemsida på Ni kan [https://username.github.io](https://lisaviktorsson.github.io/).
