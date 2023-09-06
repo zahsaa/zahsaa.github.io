@@ -1,8 +1,8 @@
 # USERNAME.github.io
 
-Hej! Här är en mall för att hosta en egen hemsida på GitHub i ett projekt som ni kallar USERNAME.github.io där USERNAME är ert användarnamn, typ som att mitt användarnamn är **lisaviktorsson**.
+Hej! 
 
-Jag har förberett hela detta projekt med det som behövs för att bygga en statisk hemsida med kommandot:
+Här är en mall för den webbplats ni kommer bygga över året. Den innehåller en del startkod för vissa av era webbsidor och en del färdig konfigerade delar så att ni bland annat kan hosta en egen hemsida på GitHub. Det enda som behövs för att bygga en statisk hemsida är att skriva in följande kommandot i terminalen:
 
 ```bash
 # create a new project in the current directory
@@ -11,21 +11,11 @@ npm run build
 
 Detta bygger er hemsida och lägger den i mappen docs/
 
-Ni kan klona detta repo förslagsvis eller zippa och kopiera över det själva.
 
-Eller så kan ni själva fixa med:
+## Fork av Github Repo
 
-```
-import adapter from '@sveltejs/adapter-static'; //svelte.config.js
-"@sveltejs/adapter-static": "next", //package.json
-adapter: adapter({assets:'docs',pages:'docs'}) //svelte.config.js
-export const prerender = true; //+layout.js
-export const ssr = false; //+layout.js
+- Klicka på fork repository. Döp det nya repot till **USERNAME.github.io** där USERNAME är ert användarnamn på GitHub. Ni kan behöva byta namn på det repository ni skapade i ettan då ni testade på webbutveckling.
 
-
-```
-
-Ni behöver också en fil i mappen static/ som heter .nojekyll
 
 ## GitHub Pages
 
@@ -36,3 +26,14 @@ Ni behöver aktivera GitHub Pages för ert repo när ni är klara:
 Ni kan [läsa mer här](https://pages.github.com/).
 
 Sedan kommer ni nå er hemsida på Ni kan [https://username.github.io](https://lisaviktorsson.github.io/).
+
+
+## Köra er webbplats lokalt
+
+För att kunna se era ändringar i realtid under utvecklingsprocessen så kommer ni köra er kod lokalt på datorn. För att starta en starta en utvecklingsserver lokalt på din dator används kommandot 
+
+```bash
+npm run dev
+```
+
+När er webbserver körs på er dator, kan du nå den genom att använda adressen "http://localhost:5173/" - siffrorna kan skilja sig ifall du har flera webbservrar igång. 
