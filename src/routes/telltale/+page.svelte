@@ -1,4 +1,5 @@
 <script>
+  /*Optional task*/
   import { story_id_store } from "$lib/stores";
   import { stories } from "$lib/stories";
 
@@ -9,10 +10,7 @@
   $: story_id = $story_id_store;
   $: story = stories.find((story) => story.id == story_id);
 
-
 </script>
-
-
 
 
 <main>

@@ -1,12 +1,12 @@
-<nav>
+<script>
+
+</script>
+
+
+<nav >
   <a href="/">Hem</a>
-  <a href="/telltale">Telltale</a>
   <a href="/memory">Memory</a>
-  <a href="/chat">Chat</a>
-  <a href="/search">Search</a>
-  <a href="/blog">Blog</a>
-
-
+  <a href="/telltale">Telltale</a>
 
   <a
     target="_blank"

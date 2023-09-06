@@ -1,10 +1,10 @@
 <script>
   let cards = [];
-  for (let index = 0; index < 4; index++) {
+  for (let index = 0; index < 12; index++) {
     cards.push({
       id: 5, // TODO: unique ids per card card
       img: "/notrick.gif", // TODO: unique images per card card
-      flipped: true,  // TODO: think
+      flipped: false,  // TODO: think
       completed: false,
     });
   }
@@ -64,12 +64,27 @@
   .row {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(6, 100px);
     grid-template-rows: repeat(3, 100px);
+  }
+
+  @media (max-width:800px){
+    .row{
+      grid-template-columns: repeat(4, 100px);
+    }
+  }
+
+  @media (max-width:600px){
+    .row{
+      grid-template-columns: repeat(2, 100px);
+      grid-template-rows: repeat(6, 100px);
+
+    }
   }
 
   .card {
     border: 1px solid black;
+    border-radius: 10% 30% 50% 70%;
     cursor: pointer;
     transition: transform 1s;
     transform-style: preserve-3d;
@@ -83,6 +98,7 @@
 
   .card .back {
     transform: rotateY(0deg);
+    
   }
 
   .card .front {
@@ -90,6 +106,7 @@
   }
 
   .card img {
+    border-radius: 50% 20% / 10% 40%;;
     width: 100%;
     height: 100%;
     object-fit: cover;
