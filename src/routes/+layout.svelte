@@ -10,7 +10,7 @@
 
   <a
     target="_blank" rel="noreferrer"
-    href="https://github.com/lisaviktorsson/lisaviktorsson.github.io"
+    href="https://github.com/lisaviktorsson/lisaviktorsson.github.com"
     >GitHub</a
   >
 </nav>
