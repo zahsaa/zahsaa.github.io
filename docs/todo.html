@@ -5,7 +5,8 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="./_app/immutable/start-2f8b430d.js">
+		<link href="./_app/immutable/assets/_page-7cecdc6f.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-2fb6c6dd.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-23a970da.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-adfc9161.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-58f5263b.js">
@@ -15,7 +16,7 @@
 		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-63d049d7.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/todo/_page.svelte-378d790c.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/todo/_page.svelte-b03ed5b7.js">
 	</head>
 	<body>
 		<div style="display: contents">
@@ -29,17 +30,36 @@
 
 <hr>
 
+<div class="container svelte-1any60d"><h1>TODO</h1>
+<input type="text" class="svelte-1any60d" value=""> <button>Add Todo </button>
+
+
+<div class="layout svelte-1any60d"><div style="display:grid"><h1>NEW</h1>
+        <ul class="svelte-1any60d"><li>Homework<button>Complete </button>
+                    </li><li>Cook for sibling<button>Complete </button>
+                    </li></ul></div>
+    <div style="display:grid"><h1>COMPLETED</h1>
+        <ul class="svelte-1any60d"><li>Whach movie with friend <div class="btn btn-two svelte-1any60d"><button>REMOVE </button></div>
+                    </li></ul></div></div></div>
 
 
 
-		<script type="module" data-sveltekit-hydrate="9gregg">
-			import { start } from "./_app/immutable/start-2f8b430d.js";
+
+
+<ol class="svelte-1any60d"><li>Ett list objekt</li>
+<li>Ett annat list objekt</li></ol>
+<ul class="svelte-1any60d"><li>Ett list objekt</li>
+<li>Ett annat list objekt</li></ul>
+
+
+		<script type="module" data-sveltekit-hydrate="cg2a35">
+			import { start } from "./_app/immutable/start-2fb6c6dd.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="9gregg"]').parentNode,
-				version: "1701851816384",
+				target: document.querySelector('[data-sveltekit-hydrate="cg2a35"]').parentNode,
+				version: "1703061425678",
 				hydrate: {
 					node_ids: [0, 17],
 					data: [null,null],
