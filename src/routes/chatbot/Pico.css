@@ -1,0 +1,13 @@
+@keyframes namnet-på-nyckelramen {
+    0% { /* Egenskaper vid 0% av animationen */}
+    50% { /* Egenskaper vid 50% av animationen */}
+    100% { /* Egenskaper vid 100% av animationen */}
+    }
+
+    .min-animation {
+        animation-name: namnet-på-nyckelramen;
+        animation-duration: 3s; /* Längd på animationen (till exempel 3
+        sekunder) */
+        animation-timing-function: ease-in-out; /* Funktion som styr
+        tidsförloppet (till exempel "ease-in-out") */
+        }
