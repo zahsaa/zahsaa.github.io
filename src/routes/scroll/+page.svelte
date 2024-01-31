@@ -2,15 +2,15 @@
     import { fade, fly } from 'svelte/transition';
   
     // Define parallax layers
-    const layers = [0, 1, 2, 3];
+    const layers = [3,2,1];
   
     // Define messages for scrollytelling
     const messages = [
+      'Whet is the best build game...',
       'Keep scrolling...',
-      'More scrolling...',
       'Almost there...',
-      'You did it!',
-      'You are done!'
+      'MINECRAFT is the best build game EVER!',
+      'Trye it!'
     ];
   
     // Initialize scroll position, message index, and fader
@@ -31,6 +31,7 @@
       // Update the fader state based on message change
       fader = currentMessageIndex === tempIndex;
     }
+
   </script>
   
   <svelte:window bind:scrollY={y} on:scroll={handleScroll} />
@@ -41,7 +42,7 @@
       {#each layers as layer}
         <img
           style="transform: translate(0, {y < 2 ? y * layer : -y * layer / (layers.length - 1)}px)"
-          src={`https://www.devsamples.com/parallax-layer${layer}.png`}
+          src={`/Bakgrund${layer}.png`}
           alt={`parallax layer ${layer}`}
         >
       {/each}
@@ -67,7 +68,7 @@
     :global(body) {
       margin: 0;
       padding: 0;
-      background-color: #121212;
+      background-color: #81df5d;
     }
   
     main {
