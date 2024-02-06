@@ -1,0 +1,20 @@
+---
+title: Vecka 5
+date: "2024-02-02"
+keywords: ["planning"]
+---
+
+```HTML 
+<div>bind:value={...}</div>
+
+```
+*Jag använde detta functionen i register för att binda bunkter. Till exempel på emajl,
+ om jag skriver i de så kommer det att ta informationen.*
+
+```CSS
+.container {
+    width: 80vw;
+    height: 70vh;
+}
+```
+*Jag använde den här koden för att bestämma breden och höjden på ett behållare. Jag använde detta även för att bestäma hur behållaren ska se ut.*
