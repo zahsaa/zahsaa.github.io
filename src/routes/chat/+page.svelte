@@ -2,6 +2,7 @@
   import { enhance } from "$app/forms";
   import "elizabot";
   import ElizaBot from "elizabot";
+  import { each } from "svelte/internal";
 
   let eliza = new ElizaBot();
 
@@ -9,7 +10,8 @@
 
   async function write(message) {
     // TODO: yeet in the new message
-
+    chat.push({user:"me", text: message})
+    chat = chat
     var element = document.getElementById("visible");
     element.style.display = "flex"; 
 
@@ -18,11 +20,31 @@
     element.style.display = "none"; 
 
     // TODO: write the text
-  
-  
+
+    chat = chat.concat({
+              user: 'eliza',
+              text: eliza.transform(message)
+            })
+
+
  
    } 
+
+
+
+		
+	
+
+
+
+
+
+
+
+
 </script>
+
+
 
 
 <svelte:head>
@@ -37,20 +59,24 @@
   </style>
 </svelte:head>
 
+
 <div class="container">
   <h1>TODO: Complete assignment</h1>
   <div class="scrollable">
     <!-- TODO: loop over the messages and display them -->
-    <article>
+    {#each chat as message}
+     <article class={message.user}>
       <span>
-        {chat[0].text}
+        {message.text}
       </span>
     </article>
+    {/each}
     <article id="visible">
       <span class= "circle"></span>
       <span class= "circle"></span>
       <span class= "circle"></span>
     </article>
+
   </div>
   <form
     method="post"
@@ -61,6 +87,7 @@
       write(text);
 
       // TODO: reset the form using form.reset()
+      form.reset()
     }}
   >
     <input type="text" name="text" />
@@ -77,7 +104,22 @@
   align-items: center;
   padding: 0%;
 }
+.eliza{
+  border-width: 5px;
+  border-style:solid;
+  border-color: rgba(87, 190, 254, 0.666);
+  border-radius: 50%;
 
+}
+
+.me{
+  height: 20px;
+  border-width: 5px;
+  border-style:groove;
+  border-color: rgba(255, 74, 74, 0.633);
+  border-radius: 5%;
+
+}
 .circle {
   height:10px;
   width:10px;
