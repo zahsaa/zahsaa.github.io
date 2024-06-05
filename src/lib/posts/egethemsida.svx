@@ -1,0 +1,34 @@
+
+---
+title: Eget hemsida(Bloginläg)
+date: "2024-03-27"
+keywords: [""]
+---
+
+
+*Det har varit svårt för mig att komma på ett idé i början, därför så gick jag tillbacka till gammla hemsider som vi har jorde tidigare.Jag har använt sidorna webb shop och register för att göra mitt hemsida, som är en webb shop för filmer och böcker med ett inlognongsida.*
+
+*Jag använde functionen*
+```html
+
+     Login() 
+      if (email != '' && password != '') {
+        window.location.href = "/shop";
+      } else {
+          alert('Email eller lösenord är fel. Försök igen.');
+      } 
+  ```
+      
+      För att kunna gå från inlognigsida till webb shop.
+
+      *För att göra att inloggningsida ser bettre så använde jag *
+      
+```css
+  <img src="" alt=" ">
+  ```
+För att sätta bilder i inloggning sida. 
+
+
+"Ändringar"
+*Nu började jag att göra flera delar i hemsida. Där det finns ett lenk som tillexempel hetter Movie shop där den går till en till hemsida som visar bara filmer.*
+*Jag ändvände funktionen "<a href="/shop">Top Read/Watching</a> För att göra det" Anars så har jag inte jorde mycket ändringar för att den andra sidan ser ut nästan som den dörsta men med lite ändringar. Sen ska jag också försöka att göra varkukorg bettre så att de kommer att visa summan av prisen som man valde att köpa.*
